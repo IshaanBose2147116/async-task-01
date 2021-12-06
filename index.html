@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="flex-container">
+        <div class="header-container">
+            <div class="header">
+                <span class="click-text" onClick="changeContent('main')">CHRIST (Deemed to be University)</span>
+            </div>
+        </div>
+        <div class="row-container">
+            <div class="row">
+                <div class="links-container">
+                    <ul>
+                        <li class="link-item" onClick="changeContent('cs')">Computer Science</li>
+                        <li class="link-item" onClick="changeContent('maths')">Mathematics & Statistics</li>
+                        <li class="link-item" onClick="changeContent('chem')">Chemistry</li>
+                        <li class="link-item" onClick="changeContent('phy')">Physics</li>
+                        <li class="link-item" onClick="changeContent('law')">Law</li>
+                    </ul>
+                </div>
+                <div class="content" id="content-container"></div>
+            </div>
+        </div>
+        <div class="footer-container">
+            <div class="footer">
+                <span class="marquee-left">Breaking News: Marquee is now obsolete, and this had to be made using css! Breaking News: This website is very well made, and whoever made it should receive full marks.</span>
+                <br/>
+                <span class="marquee-right">Breaking News: Marquee is now obsolete, and this had to be made using css! Breaking News: This website is very well made, and whoever made it should receive full marks.</span>
+            </div>
+        </div>
+    </div>
+    <script src="change_content.js"></script>
+</body>
+</html>
