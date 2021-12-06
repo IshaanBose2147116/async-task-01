@@ -841,25 +841,6 @@ function changeContent(page)
     sessionStorage.setItem("current-content", page);
 }
 
-function changeContentAJAX(page)
-{
-    alert("In function");
-    var xhttp = new XMLHttpRequest();
-    
-    xhttp.onreadystatechange = () => {
-        alert("In anon funct");
-        if (this.readyState === 4 && this.status === 200) {
-            alert("retrieved");
-            document.getElementById("content-container").innerHTML = this.responseText;
-        }
-    };
-
-    alert("Before open");
-    xhttp.open("GET", "https://ishaanbose2147116.github.io/async-task-01/main_page_content.html", true);
-    alert("after opne");
-    xhttp.send();
-}
-
 window.onload = () => {
     if (sessionStorage.getItem("current-content") === null)
         sessionStorage.setItem("current-content", "main");
