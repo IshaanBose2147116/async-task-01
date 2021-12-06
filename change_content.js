@@ -841,6 +841,20 @@ function changeContent(page)
     sessionStorage.setItem("current-content", page);
 }
 
+function changeContentAJAX(page)
+{
+    var xhttp = new XMLHttpRequest();
+    
+    xhttp.onreadystatechange = () => {
+        if (this.readyState === 4 && this.status === 200) {
+            document.getElementById("content-container").innerHTML = this.responseText;
+        }
+    };
+
+    xhttp.open("GET", "main_page_content.html", true);
+    xhttp.send();
+}
+
 window.onload = () => {
     if (sessionStorage.getItem("current-content") === null)
         sessionStorage.setItem("current-content", "main");
