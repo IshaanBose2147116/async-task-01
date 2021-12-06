@@ -855,7 +855,7 @@ function changeContentAJAX(page)
     };
 
     alert("Before open");
-    xhttp.open("GET", "main_page_content.html", true);
+    xhttp.open("GET", "https://ishaanbose2147116.github.io/async-task-01/main_page_content.html", true);
     alert("after opne");
     xhttp.send();
 }
