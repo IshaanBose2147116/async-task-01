@@ -843,15 +843,20 @@ function changeContent(page)
 
 function changeContentAJAX(page)
 {
+    alert("In function");
     var xhttp = new XMLHttpRequest();
     
     xhttp.onreadystatechange = () => {
+        alert("In anon funct");
         if (this.readyState === 4 && this.status === 200) {
+            alert("retrieved");
             document.getElementById("content-container").innerHTML = this.responseText;
         }
     };
 
+    alert("Before open");
     xhttp.open("GET", "main_page_content.html", true);
+    alert("after opne");
     xhttp.send();
 }
 
